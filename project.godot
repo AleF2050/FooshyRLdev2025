@@ -10,6 +10,8 @@ config_version=5
 
 [application]
 
-config/name="FooshyHuk Does The Godot Roguelike Tutorial"
+config/name="FooshyHuk does the GodOt Roguelike Tutoriel"
+config/description="Anthro cats, boys with baseball hats and funny creatures smoking blunts kicking some ass in the Caves of the Funny Mountains. A thrilling FooshyHuk game coming to your own lazy household, just for you....... THAT MEANS A LOT"
+config/version="0.0.1"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
