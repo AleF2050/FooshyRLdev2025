@@ -15,4 +15,7 @@
 - **SelinaDev**: For the amazing adaptation of the Python tutorial in Godot.
 ### Assets
 #### Graphics
+- **FooshyHuk**: I made the boy player sprite.
 #### Sounds
+### Special thanks
+- **/r/roguelikedev**: My inspiration for getting (back) into roguelikes was because of how traditional roguelikes look so interesting to look at due to their high focus on worldbuilding and D&D inspired RPG gameplay. But also their friendly encouragement on developing me inspired me to keep learning Godot in this way.

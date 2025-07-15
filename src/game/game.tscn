@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://c878nx67jtysy"]
+[gd_scene load_steps=4 format=3 uid="uid://c878nx67jtysy"]
+
+[ext_resource type="Script" uid="uid://cnqfjvpgnl0m2" path="res://src/game/game.gd" id="1_s6lek"]
+[ext_resource type="Texture2D" uid="uid://bxphg3akkvxt3" path="res://assets/images/actor_homerunner.png" id="2_kgj8g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l80un"]
+atlas = ExtResource("2_kgj8g")
+region = Rect2(0, 0, 16, 16)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_s6lek")
+
+[node name="Player" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_l80un")
+centered = false
