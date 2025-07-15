@@ -5,6 +5,9 @@
 
  This project will be developed in Godot 4.5 beta 3, mostly basing on [SelinaDev's Yet Another Roguelike Tutorial for Godot 4.1](https://selinadev.github.io/05-rogueliketutorial-01/) (can't believe it's already 2 years old haha) with some personal touches of mine. I originally wanted to follow the Python tutorial but my sheer lack of practise with Python led me to play safe by taking on the Godot tutorial. There's chances this project may be dropped depending on how i'm performing with it or just when i feel like it so wish me luck.
 
+ ## Current progress as of 15/07/2025
+ Finished parts 1 out of 13. Currently planning some design stuff.
+
 ## Credits
 ### Tools used
 - **Godot Engine 4.5 beta 3**: Thanks Juan. For making one of the best new game engines for the new decade.
