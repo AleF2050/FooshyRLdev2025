@@ -3,8 +3,8 @@ This is the repository of my project for [/r/roguelikedev's annual Tutorial Tues
 
 This project will be developed in Godot 4.5 beta 3, mostly basing on [SelinaDev's Yet Another Roguelike Tutorial for Godot 4.1](https://selinadev.github.io/05-rogueliketutorial-01/) (can't believe it's already 2 years old haha) with some personal touches of mine. I originally wanted to follow the Python tutorial but my sheer lack of practise with Python led me to play safe by taking on the Godot tutorial.
 
-## Current progress as of 15/07/2025
-Finished parts 1 out of 13.
+## Current progress as of 16/07/2025
+Finished parts 1 out of 13. Working on Part 2.
 
 ## Credits
 ### Tools used
