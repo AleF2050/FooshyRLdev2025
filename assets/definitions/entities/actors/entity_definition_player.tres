@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EntityDefinition" load_steps=4 format=3 uid="uid://c5rfee6wcq7fb"]
+
+[ext_resource type="Script" uid="uid://pmt0y275am2o" path="res://src/entities/entity_definition.gd" id="1_j7dal"]
+[ext_resource type="Texture2D" uid="uid://bxphg3akkvxt3" path="res://assets/images/actor_homerunner.png" id="2_js7ka"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkhq4"]
+atlas = ExtResource("2_js7ka")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_j7dal")
+texture = SubResource("AtlasTexture_qkhq4")
+metadata/_custom_type_script = "uid://pmt0y275am2o"
