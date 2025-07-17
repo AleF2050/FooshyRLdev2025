@@ -6,8 +6,8 @@ const player_definition: EntityDefinition = preload("res://assets/definitions/en
 
 @onready var player: Entity
 @onready var event_handler: EventHandler = $EventHandler
-@onready var entities: Node = $Entities
-@onready var map: Node2D = $Map
+@onready var entities: Node2D = $Entities
+@onready var map = $Map
 
 
 func _ready() -> void:

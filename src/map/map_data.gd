@@ -33,7 +33,7 @@ func _setup_tiles() -> void:
 func is_in_bounds(coordinate: Vector2i) -> bool:
 	return (
 		0 <= coordinate.x
-		and coordinate.x > width
+		and coordinate.x < width
 		and 0 <= coordinate.y
 		and coordinate.y < height
 	)
