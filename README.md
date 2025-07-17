@@ -3,8 +3,8 @@ This is the repository of my project for [/r/roguelikedev's annual Tutorial Tues
 
 This project will be developed in Godot 4.5 beta 3, mostly basing on [SelinaDev's Yet Another Roguelike Tutorial for Godot 4.1](https://selinadev.github.io/05-rogueliketutorial-01/) (can't believe it's already 2 years old haha) with some personal touches of mine.
 
-## Current progress as of 16/07/2025
-Finished parts 1 out of 13. Working on Part 2.
+## Current progress as of 17/07/2025
+Finished parts 2 out of 13.
 
 ## Credits
 ### Tools used
@@ -20,6 +20,7 @@ Finished parts 1 out of 13. Working on Part 2.
 - **PiiiXL**: https://piiixl.itch.io/1-bit-patterns-and-tiles for the wall tiles. (CC BY 4.0)
 #### Sounds
 ### Special thanks
+- **SelinaDev**
 - **/r/roguelikedev**: My inspiration for getting (back) into roguelikes was because of how traditional roguelikes look so interesting to look at due to their high focus on worldbuilding and D&D inspired RPG gameplay. But also their friendly encouragement on developing me inspired me to keep learning Godot in this way.
 
 ## How to load this project

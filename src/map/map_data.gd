@@ -39,7 +39,6 @@ func is_in_bounds(coordinate: Vector2i) -> bool:
 	)
 
 
-
 func get_tile(grid_position: Vector2i) -> Tile:
 	var tile_index: int = grid_to_index(grid_position)
 	if tile_index == -1:
