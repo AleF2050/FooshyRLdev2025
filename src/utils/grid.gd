@@ -1,3 +1,4 @@
+## Class utilized for grid related functions.
 class_name Grid
 extends Object
 

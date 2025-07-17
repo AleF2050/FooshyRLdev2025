@@ -1,3 +1,4 @@
+## Base class for entities (or actors).
 class_name Entity
 extends Sprite2D
 
