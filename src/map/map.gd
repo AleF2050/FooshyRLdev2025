@@ -1,8 +1,9 @@
+## Main class relating to map control.
 class_name Map
 extends Node2D
 
-@export var map_width: int = 80
-@export var map_height: int = 45
+@export var map_width: int = 80  ## Width of map.
+@export var map_height: int = 45  ## Height of map.
 
 var map_data: MapData
 

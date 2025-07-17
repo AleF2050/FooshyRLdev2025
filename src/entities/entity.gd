@@ -2,7 +2,7 @@
 class_name Entity
 extends Sprite2D
 
-var grid_position: Vector2i:
+var grid_position: Vector2i: ## Current position of the entity located in grid coordinates.
 	set(value):
 		# Whetever the entity's grid_position is set/changed, this entity moves through specified coordinates converted into world coordinates.
 		grid_position = value
