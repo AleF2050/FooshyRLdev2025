@@ -3,11 +3,11 @@
 [ext_resource type="Script" uid="uid://pmt0y275am2o" path="res://src/entities/entity_definition.gd" id="1_j7dal"]
 [ext_resource type="Texture2D" uid="uid://bxphg3akkvxt3" path="res://assets/images/actor_homerunner.png" id="2_js7ka"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qkhq4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_js7ka"]
 atlas = ExtResource("2_js7ka")
-region = Rect2(0, 0, 16, 16)
 
 [resource]
 script = ExtResource("1_j7dal")
-texture = SubResource("AtlasTexture_qkhq4")
+texture = SubResource("AtlasTexture_js7ka")
+hor_frames = 2
 metadata/_custom_type_script = "uid://pmt0y275am2o"

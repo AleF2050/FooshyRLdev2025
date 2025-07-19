@@ -30,6 +30,7 @@ func _setup_tiles() -> void:
 		tile.set_tile_type(tile_types.wall)
 
 
+## Returns a bool stating if the specified tile from a coordinate fit inside the map's width and height.
 func is_in_bounds(coordinate: Vector2i) -> bool:
 	return (
 		0 <= coordinate.x
@@ -39,6 +40,7 @@ func is_in_bounds(coordinate: Vector2i) -> bool:
 	)
 
 
+## Returns a tile instance according to a specified position from the grid.
 func get_tile(grid_position: Vector2i) -> Tile:
 	var tile_index: int = grid_to_index(grid_position)
 	if tile_index == -1:
@@ -46,6 +48,7 @@ func get_tile(grid_position: Vector2i) -> Tile:
 	return tiles[tile_index]
 
 
+## Returns an int stating a specified index taken from a grid position. Returns -1 if the specified index is out of bounds.
 func grid_to_index(grid_position: Vector2i) -> int:
 	if not is_in_bounds(grid_position):
 		return -1

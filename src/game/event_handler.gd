@@ -2,7 +2,7 @@ class_name EventHandler
 extends Node
 
 
-## Returns a specific action following inputs by the user.
+## Returns a specific action following user inputs.
 func get_action() -> Action:
 	var action: Action = null
 	
