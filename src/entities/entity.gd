@@ -38,5 +38,6 @@ func _on_anim_timer_timeout() -> void:
 		frame = 0
 
 
+## Move the entity to a new grid offset position.
 func move(move_offset: Vector2i) -> void:
 	grid_position += move_offset

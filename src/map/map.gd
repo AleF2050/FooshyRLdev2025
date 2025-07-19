@@ -7,6 +7,7 @@ extends Node2D
 var map_data: MapData
 
 
+## Generates a new map using the DungeonGenerator class.
 func generate(player: Entity) -> void:
 	map_data = dungeon_generator.generate_dungeon(player)
 	_place_tiles()

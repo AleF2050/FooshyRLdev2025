@@ -1,3 +1,4 @@
+## This class handles the process of generating dungeons.
 class_name DungeonGenerator
 extends Node
 
@@ -6,9 +7,9 @@ extends Node
 @export var map_height: int = 45  ## Height of the map to generate.
 
 @export_category("Rooms RNG")
-@export var max_rooms: int = 30
-@export var room_max_size: int = 10
-@export var room_min_size: int = 6
+@export var max_rooms: int = 30  ## The max amount of rooms to generate.
+@export var room_max_size: int = 10  ## How large the room can be.
+@export var room_min_size: int = 6  ## How smaller the room can be.
 
 var _rng := RandomNumberGenerator.new()
 
@@ -17,6 +18,9 @@ func _ready() -> void:
 	_rng.randomize()
 
 
+## Generates a new dungeon using a simple room bridging algorithm. 
+## Requires a player entity instance so that the dungeon can generate alongside placing the player in the first room.
+## Lastly, after the generating algorithm process, it then returns a MapData.
 func generate_dungeon(player: Entity) -> MapData:
 	var dungeon := MapData.new(map_width, map_height)
 	
