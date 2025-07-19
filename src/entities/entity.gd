@@ -30,8 +30,6 @@ func _ready() -> void:
 	_anim_timer.start()
 
 
-#func _physics_process(delta: float) -> void:
-
 func _on_anim_timer_timeout() -> void:
 	# If the _anim_timer timeouts, animate entity texture by moving forward one frame.
 	if frame <= hframes-2:
