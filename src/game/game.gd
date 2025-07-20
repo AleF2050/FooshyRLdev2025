@@ -8,23 +8,26 @@ const player_definition: EntityDefinition = preload("res://assets/definitions/en
 @onready var event_handler: EventHandler = $EventHandler  ## Event handler to use.
 @onready var entities: Node2D = $Entities  ## A Node2D in which every Entity will be placed in the map.
 @onready var map = $Map  ## The Map node is the container for the stored MapData to use.
+@onready var camera: Camera2D = $Camera2D
 
 
 func _ready() -> void:
 	player = Entity.new(Vector2i.ZERO, player_definition)
-	var camera: Camera2D = $Camera2D
 	remove_child(camera)
 	player.add_child(camera)
-	
 	entities.add_child(player)
 	map.generate(player)
+	map.update_fov(player.grid_position)
 
 
 func _physics_process(_delta: float) -> void:
 	# This is where actions are being executed by player input.
 	var action: Action = event_handler.get_action()
 	if action:
+		var previous_player_position: Vector2i = player.grid_position
 		action.perform(self, player)
+		if player.grid_position != previous_player_position:
+			map.update_fov(player.grid_position)
 
 
 func get_map_data() -> MapData:

@@ -50,3 +50,9 @@ func grid_to_index(grid_position: Vector2i) -> int:
 	if not is_in_bounds(grid_position):
 		return -1
 	return grid_position.y * width + grid_position.x
+
+
+## Retrieves a specific Tile using a set of x and y coordinates.
+func get_tile_xy(x: int, y: int) -> Tile:
+	var grid_position := Vector2i(x, y)
+	return get_tile(grid_position)
