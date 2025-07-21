@@ -8,6 +8,7 @@ atlas = ExtResource("2_js7ka")
 
 [resource]
 script = ExtResource("1_j7dal")
+name = "The Hero"
 texture = SubResource("AtlasTexture_js7ka")
 hor_frames = 2
 metadata/_custom_type_script = "uid://pmt0y275am2o"

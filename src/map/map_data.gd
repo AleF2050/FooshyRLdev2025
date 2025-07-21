@@ -10,11 +10,13 @@ const tile_types = {
 var width: int
 var height: int
 var tiles: Array[Tile]
+var entities: Array[Entity]
 
 
 func _init(map_width: int, map_height: int) -> void:
 	width = map_width
 	height = map_height
+	entities = []
 	_setup_tiles()
 
 
@@ -56,3 +58,10 @@ func grid_to_index(grid_position: Vector2i) -> int:
 func get_tile_xy(x: int, y: int) -> Tile:
 	var grid_position := Vector2i(x, y)
 	return get_tile(grid_position)
+
+
+func get_blocking_entity_at_location(grid_position: Vector2i) -> Entity:
+	for entity in entities:
+		if entity.is_blocking_movement() and entity.grid_position == grid_position:
+			return entity
+	return null

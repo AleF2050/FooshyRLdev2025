@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EntityDefinition" load_steps=3 format=3 uid="uid://cg0a5q7x1qjek"]
+
+[ext_resource type="Script" uid="uid://pmt0y275am2o" path="res://src/entities/entity_definition.gd" id="1_jo12c"]
+[ext_resource type="Texture2D" uid="uid://j3lp0ntr0jbf" path="res://assets/images/enemy_chikobo.png" id="2_chaqc"]
+
+[resource]
+script = ExtResource("1_jo12c")
+name = "Clumsy Chikobo"
+texture = ExtResource("2_chaqc")
+hor_frames = 2
+metadata/_custom_type_script = "uid://pmt0y275am2o"

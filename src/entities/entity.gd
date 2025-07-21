@@ -2,6 +2,7 @@
 class_name Entity
 extends Sprite2D
 
+var _definition: EntityDefinition
 var _anim_timer: Timer
 
 var grid_position: Vector2i: ## Current position of the entity located in grid coordinates.
@@ -14,10 +15,7 @@ var grid_position: Vector2i: ## Current position of the entity located in grid c
 func _init(start_position: Vector2i, entity_definition: EntityDefinition) -> void:
 	centered = false
 	grid_position = start_position
-	texture = entity_definition.texture
-	modulate = entity_definition.color
-	hframes = entity_definition.hor_frames
-	vframes = entity_definition.ver_frames
+	set_entity_type(entity_definition)
 
 
 func _ready() -> void:
@@ -28,6 +26,14 @@ func _ready() -> void:
 	_anim_timer.wait_time = 0.5
 	_anim_timer.timeout.connect(_on_anim_timer_timeout)
 	_anim_timer.start()
+
+
+func set_entity_type(entity_definition: EntityDefinition) -> void:
+	_definition = entity_definition
+	texture = entity_definition.texture
+	modulate = entity_definition.color
+	hframes = entity_definition.hor_frames
+	vframes = entity_definition.ver_frames
 
 
 func _on_anim_timer_timeout() -> void:
@@ -41,3 +47,13 @@ func _on_anim_timer_timeout() -> void:
 ## Move the entity to a new grid offset position.
 func move(move_offset: Vector2i) -> void:
 	grid_position += move_offset
+
+
+## Returns the entity's ability to block other entity's movements.
+func is_blocking_movement() -> bool:
+	return _definition.is_blocking_movement
+
+
+## Returns the entity's name.
+func get_entity_name() -> String:
+	return _definition.name

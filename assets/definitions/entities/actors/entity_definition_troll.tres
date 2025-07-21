@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EntityDefinition" load_steps=3 format=3 uid="uid://dvvt67q2baobk"]
+
+[ext_resource type="Script" uid="uid://pmt0y275am2o" path="res://src/entities/entity_definition.gd" id="1_fib55"]
+[ext_resource type="Texture2D" uid="uid://dmrknxgy5rase" path="res://assets/images/enemy_frog.png" id="2_yloo0"]
+
+[resource]
+script = ExtResource("1_fib55")
+name = "Luminescent Amphibe"
+texture = ExtResource("2_yloo0")
+hor_frames = 2
+metadata/_custom_type_script = "uid://pmt0y275am2o"
