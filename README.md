@@ -10,8 +10,11 @@ Finished parts 5 out of 13.
 ### Tools used
 - **Godot Engine 4.5 beta 3**: Thanks Juan. For making one of the best new game engines for the new decade.
 - **Aseprite**: Will keep using it fortnite (not the game, i meant FORTH NIGHT) forever.
+#### Sound making tools
 - **SFXR**: Some of the older original sounds i made were done from this neat app.
 - **CTone**: This tool is derived from one of Daisuke Amaya's earlier sound making tools he developed for Cave Story and it's amazing. The newer original sound effects are made on this.
+- **LabChirp**: Similar to CTone but has a really cool randomizer and is superior compared to SFXR. Sadly underrated.
+- **Dn-FamiTracker**: Jingle based sound effects.
 ### Articles
 - **SelinaDev**: For the amazing adaptation of the Python tutorial in Godot.
 ### Assets

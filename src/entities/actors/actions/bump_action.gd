@@ -2,6 +2,7 @@ class_name BumpAction
 extends ActionWithDirection
 
 
+## The entity transfers its position to a specified offset determined by the init's offset and attempts to deal a melee attack on another entity if there's one.
 func perform(game: Game, entity: Entity) -> void:
 	var destination := Vector2i(entity.grid_position + offset)
 	

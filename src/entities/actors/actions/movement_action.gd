@@ -8,6 +8,13 @@ func perform(game: Game, entity: Entity) -> void:
 	
 	var map_data: MapData = game.get_map_data()
 	var destination_tile: Tile = map_data.get_tile(destination)
+	
+	# If the offset is higher or lower than 0, the entity's sprite flips horizontally depending on the offset's direction.
+	if offset.x >= 1:
+		entity.flip_h = false
+	elif offset.x <= -1:
+		entity.flip_h = true
+	
 	if not destination_tile or not destination_tile.is_walkable():
 		return
 	if game.get_map_data().get_blocking_entity_at_location(destination):

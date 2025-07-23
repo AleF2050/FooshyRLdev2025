@@ -60,6 +60,7 @@ func get_tile_xy(x: int, y: int) -> Tile:
 	return get_tile(grid_position)
 
 
+## Checks if there's an existing blocking entity in the map.
 func get_blocking_entity_at_location(grid_position: Vector2i) -> Entity:
 	for entity in entities:
 		if entity.is_blocking_movement() and entity.grid_position == grid_position:
