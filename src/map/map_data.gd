@@ -11,6 +11,7 @@ var width: int
 var height: int
 var tiles: Array[Tile]
 var entities: Array[Entity]
+var player: Entity # Temporary fix?
 
 
 func _init(map_width: int, map_height: int, player: Entity) -> void:
