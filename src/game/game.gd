@@ -4,15 +4,14 @@ extends Node2D
 
 const player_definition: EntityDefinition = preload("res://assets/definitions/entities/actors/entity_definition_player.tres")  ## Starting player entity definition to use.
 
-@onready var event_handler: EventHandler = $EventHandler  ## Event handler to use.
+@onready var player: Entity  ## The Entity to use as the player.
+@onready var input_handler: InputHandler = $InputHandler  ## Event handler to use.
 @onready var map = $Map  ## The Map node is the container for the stored MapData to use.
 @onready var camera: Camera2D = $Camera2D
 
-@onready var player: Entity  ## The Entity to use as the player.
-
 
 func _ready() -> void:
-	player = Entity.new(Vector2i.ZERO, player_definition)
+	player = Entity.new(null, Vector2i.ZERO, player_definition)
 	remove_child(camera)
 	player.add_child(camera)
 	map.generate(player)
@@ -21,10 +20,10 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	# This is where actions are being executed by player input.
-	var action: Action = event_handler.get_action()
+	var action: Action = input_handler.get_action(player)
 	if action:
 		var previous_player_position: Vector2i = player.grid_position
-		action.perform(self, player)
+		action.perform()
 		_handle_enemy_turns()
 		map.update_fov(player.grid_position)
 

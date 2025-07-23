@@ -3,6 +3,7 @@ class_name Entity
 extends Sprite2D
 
 var _definition: EntityDefinition
+var map_data: MapData
 var _anim_timer: Timer
 
 var grid_position: Vector2i: ## Current position of the entity located in grid coordinates.
@@ -12,9 +13,10 @@ var grid_position: Vector2i: ## Current position of the entity located in grid c
 		position = Grid.grid_to_world(grid_position)
 
 
-func _init(start_position: Vector2i, entity_definition: EntityDefinition) -> void:
+func _init(map_data: MapData, start_position: Vector2i, entity_definition: EntityDefinition) -> void:
 	centered = false
 	grid_position = start_position
+	self.map_data = map_data
 	set_entity_type(entity_definition)
 
 

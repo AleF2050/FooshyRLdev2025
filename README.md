@@ -3,6 +3,11 @@ This is the repository of my project for [/r/roguelikedev's annual Tutorial Tues
 
 This project will be developed in Godot 4.5 beta 3, mostly basing on [SelinaDev's Yet Another Roguelike Tutorial for Godot 4.1](https://selinadev.github.io/05-rogueliketutorial-01/) (can't believe it's already 2 years old haha) with some personal touches of mine.
 
+## New features i've included
+### Visual enhancements
+- Entities have animated sprites using a small sprite sheet.
+- When entities move, their offset influence the orientation of the sprite.
+
 ## Current progress as of 21/07/2025
 Finished parts 5 out of 13.
 
