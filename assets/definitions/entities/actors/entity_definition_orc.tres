@@ -1,11 +1,20 @@
-[gd_resource type="Resource" script_class="EntityDefinition" load_steps=3 format=3 uid="uid://cg0a5q7x1qjek"]
+[gd_resource type="Resource" script_class="EntityDefinition" load_steps=5 format=3 uid="uid://cg0a5q7x1qjek"]
 
+[ext_resource type="Script" uid="uid://cbiuqx03gllok" path="res://src/entities/actors/components/component_definitions/fighter_component_definition.gd" id="1_chaqc"]
 [ext_resource type="Script" uid="uid://pmt0y275am2o" path="res://src/entities/entity_definition.gd" id="1_jo12c"]
 [ext_resource type="Texture2D" uid="uid://j3lp0ntr0jbf" path="res://assets/images/enemy_chikobo.png" id="2_chaqc"]
+
+[sub_resource type="Resource" id="Resource_x1j3b"]
+script = ExtResource("1_chaqc")
+max_hp = 10
+power = 3
+metadata/_custom_type_script = "uid://cbiuqx03gllok"
 
 [resource]
 script = ExtResource("1_jo12c")
 name = "Clumsy Chikobo"
 texture = ExtResource("2_chaqc")
 hor_frames = 2
+fighter_definition = SubResource("Resource_x1j3b")
+ai_type = 1
 metadata/_custom_type_script = "uid://pmt0y275am2o"

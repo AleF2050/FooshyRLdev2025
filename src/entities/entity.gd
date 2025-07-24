@@ -2,7 +2,11 @@
 class_name Entity
 extends Sprite2D
 
+enum AIType {NONE, HOSTILE}
+
 var _definition: EntityDefinition
+var fighter_component: FighterComponent
+var ai_component: BaseAIComponent
 var map_data: MapData
 var _anim_timer: Timer
 
@@ -36,6 +40,15 @@ func set_entity_type(entity_definition: EntityDefinition) -> void:
 	modulate = entity_definition.color
 	hframes = entity_definition.hor_frames
 	vframes = entity_definition.ver_frames
+	
+	match entity_definition.ai_type:
+		AIType.HOSTILE:
+			ai_component = HostileEnemyAIComponent.new()
+			add_child(ai_component)
+	
+	if entity_definition.fighter_definition:
+		fighter_component = FighterComponent.new(entity_definition.fighter_definition)
+		add_child(fighter_component)
 
 
 func _on_anim_timer_timeout() -> void:
@@ -48,7 +61,9 @@ func _on_anim_timer_timeout() -> void:
 
 ## Move the entity to a new grid offset position.
 func move(move_offset: Vector2i) -> void:
+	map_data.unregister_blocking_entity(self)
 	grid_position += move_offset
+	map_data.register_blocking_entity(self)
 
 
 ## Returns the entity's ability to block other entity's movements.
@@ -59,3 +74,7 @@ func is_blocking_movement() -> bool:
 ## Returns the entity's name.
 func get_entity_name() -> String:
 	return _definition.name
+
+
+func is_alive() -> bool:
+	return ai_component != null
