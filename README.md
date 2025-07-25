@@ -8,8 +8,8 @@ This project will be developed in Godot 4.5 beta 3, mostly basing on [SelinaDev'
 - Entities have animated sprites using a small sprite sheet.
 - When entities move, their offset influence the orientation of the sprite.
 
-## Current progress as of 21/07/2025
-Finished parts 5 out of 13.
+## Current progress as of 25/07/2025
+Finished parts 6 out of 13.
 
 ## Credits
 ### Tools used
