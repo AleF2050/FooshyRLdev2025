@@ -17,6 +17,10 @@ run/main_scene="uid://c878nx67jtysy"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://sonu1iidpe3d"
 
+[autoload]
+
+SignalBus="*res://src/utils/signal_bus.gd"
+
 [display]
 
 window/size/resizable=false

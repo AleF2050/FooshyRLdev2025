@@ -20,3 +20,6 @@ func get_blocking_entity_at_destination() -> Entity:
 ## Any code relating to the action's perform function goes here.
 #func perform(game: Game, entity: Entity) -> void:
 #	pass
+
+func get_target_actor() -> Entity:
+	return get_map_data().get_actor_at_location(get_destination())

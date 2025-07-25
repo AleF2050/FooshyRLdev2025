@@ -11,6 +11,7 @@ extends Resource
 
 @export_category("Mechanics")
 @export var is_blocking_movement: bool = true			## If true, this entity can impede any oncoming movements of other entities.
+@export var type: Entity.EntityType = Entity.EntityType.ACTOR
 
 @export_category("Components")
 @export var fighter_definition: FighterComponentDefinition

@@ -1,5 +1,4 @@
-class_name InputHandler
-extends Node
+extends BaseInputHandler
 
 const directions = {
 	"move_up": Vector2i.UP,
@@ -29,6 +28,3 @@ func get_action(player: Entity) -> Action:
 		action = EscapeAction.new(player)
 	
 	return action
-
-# https://selinadev.github.io/10-rogueliketutorial-06/#part-6
-# "Now that both the player and the enemies can move around freely..."

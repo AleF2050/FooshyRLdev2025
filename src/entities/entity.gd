@@ -2,12 +2,21 @@
 class_name Entity
 extends Sprite2D
 
+enum EntityType {CORPSE, ITEM, ACTOR}
 enum AIType {NONE, HOSTILE}
 
 var _definition: EntityDefinition
+var type: EntityType:
+	set(value):
+		type = value
+		z_index = type
+var entity_name: String
+var blocks_movement: bool
+var map_data: MapData
+
 var fighter_component: FighterComponent
 var ai_component: BaseAIComponent
-var map_data: MapData
+
 var _anim_timer: Timer
 
 var grid_position: Vector2i: ## Current position of the entity located in grid coordinates.
@@ -36,6 +45,9 @@ func _ready() -> void:
 
 func set_entity_type(entity_definition: EntityDefinition) -> void:
 	_definition = entity_definition
+	type = _definition.type
+	blocks_movement = _definition.is_blocking_movement
+	entity_name = _definition.name
 	texture = entity_definition.texture
 	modulate = entity_definition.color
 	hframes = entity_definition.hor_frames
@@ -68,12 +80,12 @@ func move(move_offset: Vector2i) -> void:
 
 ## Returns the entity's ability to block other entity's movements.
 func is_blocking_movement() -> bool:
-	return _definition.is_blocking_movement
+	return blocks_movement
 
 
 ## Returns the entity's name.
 func get_entity_name() -> String:
-	return _definition.name
+	return entity_name
 
 
 func is_alive() -> bool:
